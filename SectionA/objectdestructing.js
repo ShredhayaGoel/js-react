@@ -167,6 +167,8 @@ console.log(review);
 
 console.log(tittle);
 
+console.log(id);
+
 
 
 
