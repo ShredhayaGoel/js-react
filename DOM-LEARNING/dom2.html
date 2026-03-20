@@ -20,6 +20,7 @@
         <p id="parag" class="parag">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit commodi, molestias
             enim ut odio adipisci corporis dolorem illo fuga magni quo molestiae dolor veniam error, a quaerat id!
             Nesciunt, magnam.
+
         <p class="para">lorem ipsum</p>
         <p class="parag">lorem ipsum</p>
         <p class="par1">lorem ipsum gap 2</p>
@@ -41,20 +42,66 @@
 
     <script>
         console.log('print');
+
         console.log(document.getElementById('parag'));
-        console.log('print');
 
-        console.log(document.getElementById('firstdiv'));
+        /*  console.log('print');
+  
+          console.log(document.getElementById('firstdiv'));
+  
+          console.log('print');
+  
+          console.log(document.getElementById('heading1'));
+          console.log('print');
+  
+          console.log(document.getElementById('heading2'));
+          console.log('print');
+  
+          console.log(document.getElementById('heading2').id);
+  */
+        const tit = document.getElementById('parag').getAttribute('class');
 
-        console.log('print');
+        //  console.log(tit);
+        //     console.log(document.getElementById('parag').setAttribute('class', 'paraaa'));
+        console.log(tit);
 
-        console.log(document.getElementById('heading1'));
-        console.log('print');
+        console.log(document.getElementById('parag').setAttribute('class', 'paraaa'))
+        const title = document.getElementById('parag').getAttribute('class');
+        console.log(title);
 
-        console.log(document.getElementById('heading2'));
-        console.log('print');
+        // title.setAttribute('id', 'pg');
+        // console.log(document.querySelector('p'));
 
-        console.log(document.getElementById('heading2').id);
+        document.getElementById('parag').setAttribute('id', 'pg');
+        console.log('t1');
+        console.log(document.getElementById('pg'));
+
+        const ts = document.getElementById('heading1');
+        console.log('t2');
+
+        console.log(ts);
+        console.log(ts.getAttribute('id'));
+        console.log(ts.getAttribute('class'));
+        console.log(ts.className);
+
+        ts.setAttribute('id', "head-id")
+        ts.setAttribute('class', "head-class");
+
+        const st = document.getElementById('head-id');
+        console.log('t3');
+
+        console.log(st);
+        console.log('t4');
+
+        console.log(st.className);
+
+        console.log(ts.getAttribute('class'));
+
+
+        // .getAttributes(atrribute name either id name or class name for ex)
+
+        console.log(ts.getAttribute('id'));
+
 
     </script>
 </body>
