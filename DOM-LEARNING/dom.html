@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM LEARNING</title>
+    <link rel="stylesheet" href="dom.css">
+</head>
+
+<body>
+    <div class="bg-black" id="title">
+        <h1 id="dom" class="heading" style="background-color: aqua"> DOM LEARNING WITH CHAI AUR
+            CODE</h1>
+        <p style="display: none;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem a ab consequuntur
+            delectus ipsa, eum labore
+            illum quia architecto minima quidem? Mollitia ea quidem necessitatibus repellat modi placeat sequi labore.
+        </p>
+        <p style="visibility: hidden;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem a ab consequuntur
+            delectus ipsa, eum labore
+            illum quia architecto minima quidem? Mollitia ea quidem necessitatibus repellat modi placeat sequi labore.
+        </p>
+        <p id="par">Lorem, ipsum dolor
+        <p style="visibility: hidden;">Lorem, ipsum dolor sit </p>
+
+        <p style="display: none;">Lorem, ipsum dolor sit </p>
+        <p>Lorem, ipsum dolor </p>
+        </p>
+    </div>
+    <script>
+        console.log("1");
+        console.log(document.getElementById('title'));
+        console.log("2");
+
+        console.log(document.getElementById('title').innerHTML);
+        console.log("3");
+
+        console.log(document.getElementById('title').innerText);
+        console.log("4");
+
+        console.log(document.getElementById('title').textContent);
+
+        console.log("5");
+
+        console.log(document.getElementById('title').className);
+
+        console.log("6");
+
+        console.log(document.getElementById('par'));
+
+
+    </script>
+</body>
+
+</html>
