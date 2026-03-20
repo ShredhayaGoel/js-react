@@ -1,3 +1,35 @@
 .heading {
   text-align: center;
+  color: darkgoldenrod;
+  background-color: lightgoldenrodyellow;
+  margin: 0;
+  padding-top: 20px;
+}
+.container {
+  height: 100vmax;
+  background-color: pink;
+}
+
+.parag {
+  text-align: justify;
+  display: flex;
+  text-align: center;
+  color: blue;
+  background-color: aqua;
+  display: flex;
+  margin: 0;
+}
+.para {
+  display: none;
+  margin: 0;
+}
+.par {
+  visibility: visible;
+  margin: 0;
+  background-color: blueviolet;
+}
+.par1 {
+  visibility: hidden;
+  margin: 0;
+  background-color: blueviolet;
 }
