@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dom.css">
+</head>
+
+<body>
+    <div class="firstdiv" id="div">
+        <h1 class="head" id="hh">
+            DOM-MANIPULATION
+            <p id="pgg" class="firstpara"> 3:document.querySelector();
+            </p>
+        </h1>
+        <input type="button">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+    </div>
+    <script>
+        console.log(document.getElementById('div'));
+        const div = document.getElementById('div');
+        console.log(div);
+
+        console.log(document.getElementsByClassName('firstdiv'));
+
+        const a = document.querySelector('.firstpara');
+        console.log(a);
+
+        const ab = document.querySelector('#div');
+        console.log(ab);
+        ab.style.backgorundColor = 'red';
+        console.log(ab.innerText);
+
+        const ac = document.querySelector('ul');
+        console.log(ac);
+        const ad = ac.querySelector('li');
+
+        console.log(ad);
+
+        ad.style.backgroundColor = 'blue';
+
+    </script>
+</body>
+
+</html>
