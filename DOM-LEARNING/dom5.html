@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dom.css">
+</head>
+
+<body>
+    <div class="firstdiv" id="div">
+        <h1 class="head" id="hh">
+            DOM-MANIPULATION
+            <p id="pgg" class="firstpara"> 3:document.querySelector();
+            </p>
+        </h1>
+        <input type="button">
+        <ul class="unlist">
+            <li class="unlist">1</li>
+            <li class="unlist">2</li>
+            <li class="unlist">3</li>
+            <li class="unlist">4</li>
+        </ul>
+    </div>
+
+    <script>
+        const a = document.querySelectorAll('li');
+        console.log(a);
+        a.forEach(function (li) {
+            li.style.backgroundColor = 'red';
+        })
+        console.log(a);
+    </script>
+
+    <script>
+        const b = document.getElementsByClassName('firstpara');
+        console.log('1');
+
+        console.log(b);
+        const c = document.getElementsByClassName('unlist');
+        console.log(c);
+        /* c.forEach(function (l) {
+             l.style.backgroundColor = 'blue';
+         })
+         console.log(c);*/
+
+        console.log(Array.from(b));
+        const dc = document.getElementsByClassName('unlist');
+        console.log(dc);
+
+
+        console.log(Array.from(dc));
+
+        const arr = Array.from(dc)
+        arr.forEach(function (functionn) {
+            functionn.style.Color = 'orange';
+
+        })
+
+    </script>
+</body>
+
+</html>
