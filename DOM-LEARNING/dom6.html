@@ -5,10 +5,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="dom.css">
 </head>
 
 <body>
+    <DIV class="firstdiv" id="firstid">
+        hello world by SG
+        <h1 class="heading">PARENT-CHILD-RELATION</h1>
+        <div class="day">MONDAY</div>
+        <div class="day">TUESDAY</div>
+        <div class="day">WEDNESDAY</div>
+        <div class="day">THRUSDAY</div>
+        <div class="day">FRIDAY</div>
+        <div class="day">SATURDAY</div>
+        <div class="day">SUNDAY</div>
+    </DIV>
+    <script>
+        console.log(document.querySelector('.firstdiv'));
+        const first = document.querySelector('.firstdiv');
+        console.log(first);
+        // console.log(document.querySelector('.firstdiv.children'));
+        console.log(first.children);
+        console.log(first.childNodes);
+        console.log('1');
+        console.log();
+        first.children[1].style.color = 'orange';
 
+        console.log(first.firstElementChild);
+
+        for (let i = 0; i < first.children.length; i++) {
+            console.log(i);
+            console.log(first.children[i]);
+            first.children[i].style.color = 'cyan';
+
+        }
+
+        console.log('testing properties');
+
+        console.log('elementbyid');
+
+        console.log(document.getElementById('firstid'));
+
+        console.log('idbyqueyselector');
+
+        console.log(document.querySelector('#firstid'));
+
+        console.log('elementbyclass');
+
+        console.log(document.getElementsByClassName('firstdiv'));
+
+        console.log('classqueryselector');
+
+        console.log(document.querySelector('.firstdiv'));
+
+        console.log(first);
+
+        console.log(document.querySelectorAll('div'));
+
+        console.log(document.querySelectorAll('h1'));
+        console.log('1');
+
+        const childelement = document.querySelector('.day');
+        console.log('111');
+
+        console.log(childelement);
+        console.log('1');
+
+        console.log(childelement.parentElement);
+        console.log('1');
+
+        console.log(childelement.getAttribute('class'));
+        console.log('1');
+
+        console.log(childelement.parentElement);
+        console.log('1');
+        console.log(childelement.innerHTML);
+        console.log(childelement.innerText);
+
+        console.log('1');
+
+        console.log(childelement.nextSibling);
+        console.log('1');
+
+        console.log(childelement.nextElementSibling);
+        console.log('1');
+
+        console.log(childelement.nextElementSibling.innerText);
+
+
+
+
+
+    </script>
 </body>
 
 </html>
