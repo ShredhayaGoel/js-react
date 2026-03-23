@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dom.css">
+</head>
+
+<body>
+    <DIV class="firstdiv" id="firstid">
+        hello world by SG
+        <h1 class="heading">CREATION-OF-ELEMENTS-IN-DOM</h1>
+        <div class="day">MONDAY</div>
+        <div class="day">TUESDAY</div>
+        <div class="day">WEDNESDAY</div>
+        <div class="day">THRUSDAY</div>
+        <div class="day">FRIDAY</div>
+        <div class="day">SATURDAY</div>
+        <div class="day">SUNDAY</div>
+    </DIV>
+    <script>
+        const div = document.createElement('div');
+        console.log(div);
+        div.style.backgroundColor = 'red';
+        div.style.padding = '15px';
+
+        div.innerText = 'hello';
+
+        console.log(document.createTextNode('hello'));
+
+        const node = document.createTextNode(' world');
+
+        div.id = Math.round(Math.random() * 10 + 1);
+        div.className = 'div-class';
+
+        div.appendChild(node);
+
+        document.body.appendChild(div);
+
+    </script>
+
+</body>
+
+</html>
