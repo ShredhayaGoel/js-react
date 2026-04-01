@@ -13,4 +13,21 @@ for (const key of languages) {
 
 for (const key in languages) {
     console.log(`languages are ${key} and values are ${languages[key]}`);
-} 
+}
+
+console.log("forin loop in maps")
+const map = new Map();
+
+map.set('IN', "INDIA");
+map.set('RS', "RUSSIA");
+map.set('DB', "DUBAI");
+
+for (const key in map) {
+    console.log(key);
+}
+// only executes
+// Reason
+
+// 👉 for...in works on:
+
+// Object properties (keys)
