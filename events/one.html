@@ -8,6 +8,8 @@
 </head>
 
 <body style="background-color: gray;">
+    <h1 style="background-color: blanchedalmond ; color: darkgreen; text-align: center;  justify-content: center; "> ADD
+        EVENTS LISTENER</h1>
     <h2>AMAZING IMAGES</h2>
     <div>
         <ul class="images" id="images">
@@ -29,9 +31,79 @@
         </ul>
     </div>
     <script>
+        {/*
+            Method 2 
+            by dom and onclick bethher hen inline html on click but problem is this is that it gives limited acces to the  functions or properties of events 
+           Limited key Feature onclick()
+                                stopPropagation	✅ Yes
+                                  Event object	✅ Yes
+                                   Multiple handlers	❌ No
+                                  Capturing phase	❌ No
+                                       Advanced control	❌ Limited
+                                        addeventlistener has more features and it supprts multiple handlers 
+                                        it supports capturing phase on true means like top to bottom and advances control also 
+
+                                        mulitple handling means ex
+                                        onclick gives 
+                                                                                  btn.onclick = () => console.log("first");
+
+                                                                                  btn.onclick = () => console.log("second");
+                                                                  👉 Output:
+
+                                                                        second 
+                                                                        but in addeventlistener it gives both 
+                                                                        first and second as output 
+                                        
+            */}
+        document.getElementById('img1').addEventListener('click', function (e) {
+            e.stopPropagation();
+            alert('imges clicked');
+        });
+
+
         document.getElementById('images').onclick = function (e) {
+            e.stopPropagation();
+            console.log(e);
             alert('images-clicked');
+
         }
+
+
+        // Method 3 {addEventListener()}
+        document.getElementById('images').addEventListener('click', function (e) { /*
+             Why parent runs for all children 
+               👉 Because:
+       Event travels through parent EVERY TIME*/
+
+            alert('e.target');
+        },
+            true  // “Capturing works only when listeners are registered in capturing phase; otherwise bubbling listeners will execute separately.”
+        );
+        document.getElementById('img2').addEventListener('click', function (e) {
+            console.log(e);
+            console.log(e.target);
+            e.stopPropagation(); // “Event phases are sequential: capturing always happens before bubbling, so their order cannot be interchanged.”
+            // if i will not use this stop propogaation here then 3 alert will run 1 will be  capturing parent 
+            // then bubbling child 
+            // then bubbling parent (that i defined aas images clickd);
+            //v first bubbling me run child 
+            // then parents
+            // but in capturing me pehle parents chahe child bubbling ho ya capturing unless stop propgation use na ho 
+
+            alert('img2 is clicked');
+        },
+            false
+        );
+
+        document.getElementById('img3').addEventListener('click', function (e) {
+            console.log(e);
+            console.log(e.target);
+            alert('img3 is clicked');
+        },
+            true //  bubblinng event propgation is turn on that means propgation will be from top to bottom 
+        );
+        //             e.stopPropagation(); // benefit will not go to parent element and itwill  not print second alert
+
     </script>
 </body>
 
