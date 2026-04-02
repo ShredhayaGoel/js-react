@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+
+<body style="background-color: gray;">
+    <h2>AMAZING IMAGES</h2>
+    <div>
+        <ul class="images" id="images">
+            <!--  // method one
+            // directly int the tag but it is not feasible in scalable projects ,
+            //not very much optimizable means onevent click ko kitni baar likhoge phir har ek li me islye code
+            reusabilty ko badhana hogA -->
+            <Li><img src="image.png" id="img1" width="200px" onclick="alert('img clicked')"></Li>
+            <Li><img src="me.png" id="img2" width="200px">
+            </Li>
+            <Li><img src="image.png" id="img3" width="200px"></Li>
+            <Li><img src="me.png" id="img4" width="200px"></Li>
+            <Li><img src="image.png" id="img5" width="200px"></Li>
+            <Li><img src="me.png" id="img6" width="200px"></Li>
+            <li><a style="color: aquamarine;" href="https://www.google.com/" id="google">
+                    Google
+                </a>
+            </li>
+        </ul>
+    </div>
+    <script>
+        document.getElementById('images').onclick = function (e) {
+            alert('images-clicked');
+        }
+    </script>
+</body>
+
+</html>
