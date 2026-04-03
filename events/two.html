@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events-remove-element</title>
+</head>
+
+<body>
+    <h1 style="background-color: blanchedalmond ; color: darkgreen; text-align: center;  justify-content: center; "> ADD
+        EVENTS LISTENER</h1>
+    <h2>AMAZING IMAGES</h2>
+    <div>
+        <ul class="images" id="images">
+            <!--  // method one
+            // directly int the tag but it is not feasible in scalable projects ,
+            //not very much optimizable means onevent click ko kitni baar likhoge phir har ek li me islye code
+            reusabilty ko badhana hogA -->
+            <Li><img src="image.png" id="img1" width="200px"></Li>
+            <Li><img src="me.png" id="img2" width="200px">
+            </Li>
+            <Li><img src="image.png" id="img3" width="200px"></Li>
+            <Li><img src="me.png" id="img4" width="200px"></Li>
+            <Li><img src="image.png" id="img5" width="200px"></Li>
+            <Li><img src="me.png" id="img6" width="200px"></Li>
+            <li><a style="color: aquamarine;" href="https://www.google.com/" id="google">
+                    Google
+                </a>
+            </li>
+        </ul>
+    </div>
+    <script>
+         document.getElementById("images").addEventListener("click", function (e) {
+              alert("Image 1 clicked");
+              console.log(e);
+              let removeElement = e.target.parentElement; // e.target is the element that triggered the event, in this case, the clicked image
+              console.log(removeElement);
+              console.log(removeElement.parentElement);
+  
+              //    removeElement.remove();
+              removeElement.parentElement.removeChild(removeElement); // This line removes the clicked image from the DOM
+          });
+        document.getElementById('google').addEventListener('click', function (e) {
+            e.preventDefault(); // This prevents the default action of the link, which is to navigate to the URL
+            alert('Google link clicked');
+        });
+        // Method 1 by e.target only 
+
+
+           document.getElementById('images').addEventListener('click', function (e) {
+               // alert('Image clicked');
+               let removeElement = e.target;  // e.target is the element that triggered the event, in this case, the clicked image
+               console.log(removeElement);
+               console.log(removeElement.parentElement);
+               removeElement.remove(); // This line removes the clicked image from the DOM
+        }
+           );
+          document.getElementById('images').addEventListener('click', function (e) {
+               // alert('Image clicked');
+               let removeElement = e.target.parentElement;
+               console.log(e.target); // img or A tag
+               console.log(removeElement); // li
+               console.log(removeElement.parentElement); // ul  
+               removeElement.parentElement.removeChild(removeElement); // This line removes the clicked image from the DOM
+           }
+           );
+
+        document.getElementById('images').addEventListener('click', function (e) {
+            // alert('Image clicked');
+            console.log(e.target); // img or A tag
+            //    console.log(removeElement); // li
+            //   console.log(removeElement.parentElement); // ul  
+            if (e.target.tagName === 'IMG' || e.target.tagName === 'A') { // Check if the clicked element is an image or a link
+                let removeElement = e.target.parentElement;
+                removeElement.remove(); // This line removes the clicked image from the DOM
+            }
+        }
+        );
+
+
+    </script>
+</body>
+
+</html>
