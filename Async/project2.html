@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <h1 id="main-heading" class="text-center text-cyan-500 text-4xl text-bold
+    ">CHAI AUR CODE</h1>
+    <script>
+        // DOM Manipulation
+        document.getElementById("main-heading").innerHTML = "CHAI AUR ODE";
+        document.getElementById("main-heading").classList.add("text-red-500");
+
+        const randomcolor = new function () {
+            const hex = "01234456789abcdef";
+            let color = "#";
+            for (let i = 0; i < 6; i++) {
+                color += hex[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+    </script>
+</body>
+
+</html>
