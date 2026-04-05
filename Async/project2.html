@@ -11,19 +11,44 @@
 <body>
     <h1 id="main-heading" class="text-center text-cyan-500 text-4xl text-bold
     ">CHAI AUR CODE</h1>
+    <button id="start"
+        class="bg-cyan-300 rounded-lg border-solid border-cyan-500 text-cyan-700 hover:bg-cyan-400">ChangeColor</button>
+    <button id="stop"
+        class="bg-cyan-200 rounded-lg border-solid border-cyan-500 text-cyan-700 hover:bg-cyan-300">Stop</button>
     <script>
         // DOM Manipulation
-        document.getElementById("main-heading").innerHTML = "CHAI AUR ODE";
+        //  document.getElementById("main-heading").innerHTML = "CHAI AUR ODE";
+
+        console.log(document.getElementById("start"));
         document.getElementById("main-heading").classList.add("text-red-500");
 
-        const randomcolor = new function () {
-            const hex = "01234456789abcdef";
+        const randomcolor = function () {
+            const hex = "0123456789abcdef";
             let color = "#";
             for (let i = 0; i < 6; i++) {
                 color += hex[Math.floor(Math.random() * 16)];
+                console.log(color);
             }
             return color;
         }
+        //        console.log(randomcolor);
+        let intervalId;
+        const startchange = function () {
+            if (!intervalId) {
+                intervalId = setInterval(function () {
+                    console.log("Changing color...");
+                    document.body.style.backgroundColor = randomcolor();
+                }, 1000);
+            }
+        }
+        const stopchange = function () {
+            //   document.body.style.backgroundColor = "white";
+            clearInterval(intervalId);
+            intervalId = undefined; // reset
+        }
+        document.getElementById("start").addEventListener("click", startchange);
+        document.getElementById("stop").addEventListener("click", stopchange);
+
 
     </script>
 </body>
