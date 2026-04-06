@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1 class="bg-cyan-100 text-4xl text-center">Keydown Events</h1>
+
+    <div id="keydown">
+    </div>
+    <script>
+        document.addEventListener("keydown", (e) => {
+            console.log(e);
+            document.getElementById("keydown").innerHTML = "pressed: " + e.key;
+            document.getElementById("keydown").innerHTML = `
+            <table  style="width:100%">
+  <tr>
+    <th>Key</th>
+    <th>Key Code</th>
+    <th>Code</th>
+  </tr>
+  <tr>
+    <td>${e.key === ' ' ? 'Space' : e.key}</td>
+    <td>${e.keyCode}</td>
+    <td>${e.code}</td>
+  </tr>
+ 
+</table>             `
+        });
+    </script>
+</body>
+
+</html>
