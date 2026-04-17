@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>promises in javascript</h1>
+    <button onclick="handlelogin()">Login</button>
+</body>
+<script>
+    function handlelogin() {
+        let email = "sgsg@gmail.com";
+        let password = "1234567890";
+        const loginpromise = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve({ login: true, id: 100 });
+            }, 3000);
+        })
+
+        loginpromise.then((result) => {
+            if (result.login) {
+                alert("go to profile page")
+            }
+            else {
+                alert("try again");
+            }
+        })
+    }
+
+</script>
+
+</html>
